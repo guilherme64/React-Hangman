@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
+import Letter from './letter';
 
 class Word extends Component {
   constructor(props) {
     super(props);
     this.word = this.props.word;
+    this.letters = this.word.split('').map(function(cur) {
+      return <Letter letter={cur} />
+    });
   }
   render() {
     return(
       <div>
-        <h1>{this.word}</h1>
+        <h1>{this.letters}</h1>
       </div>
     )
   }

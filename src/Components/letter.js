@@ -4,10 +4,11 @@ class Letter extends Component {
     constructor(props) {
         super(props);
         this.letter = this.props.letter;
+        this.state = {letter: this.props.letter, hidden: true}
     }
     render() {
       return(
-       <span>{this.letter}</span> 
+       <span>{this.state.hidden?this.state.letter:'_'}</span> 
       );
     }
 }
