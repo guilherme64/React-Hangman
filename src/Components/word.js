@@ -5,6 +5,7 @@ class Word extends Component {
   constructor(props) {
     super(props);
     this.word = this.props.word;
+    this.input = this.props.input;
     this.letters = this.word.split('').map(function(cur) {
       return <Letter letter={cur} />
     });

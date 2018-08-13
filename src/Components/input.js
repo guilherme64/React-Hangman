@@ -10,11 +10,13 @@ class Input extends Component {
   onHandleChange(event) {
     if(event.target.value !== ''){
       this.setState({inputLetter: event.target.value});
-      console.log(event.target.value);
-      this.setState({inputLetter: ''});
-    }
-    
+      //console.log(event.target.value);
+      setTimeout(() => {
+         this.setState({inputLetter: ''});
+      }, 500);
+    }   
   }
+
   render() {
     return(
       <div>
