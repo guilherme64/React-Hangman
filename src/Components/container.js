@@ -8,10 +8,12 @@ class Container extends Component {
   constructor(props){
     super(props);
     this.state = {input: ''}
+    this.handleInputLetter = this.handleInputLetter.bind(this);
   }
 
   handleInputLetter(letter) {
     this.setState({input: letter});
+    console.log('esse é o input '+ this.state.input);
   }
 
 
@@ -20,7 +22,7 @@ class Container extends Component {
     return(
       <div>
         <Word word='PALAVRA' input={this.state.input}/>
-        <Input />
+        <Input handleInputLetter = {this.handleInputLetter}/>
       </div>
     );
   }

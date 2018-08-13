@@ -6,6 +6,7 @@ class Letter extends Component {
         this.letter = this.props.letter;
         this.state = {letter: this.props.letter, hidden: true}
     }
+    
     render() {
       return(
        <span>{this.state.hidden?this.state.letter:'_'}</span> 

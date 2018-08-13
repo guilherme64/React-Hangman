@@ -5,15 +5,19 @@ class Word extends Component {
   constructor(props) {
     super(props);
     this.word = this.props.word;
-    this.input = this.props.input;
-    this.letters = this.word.split('').map(function(cur) {
-      return <Letter letter={cur} />
+    let input =  this.props.input;
+    this.letters = this.word.split('').map(function(cur, index) {
+      return <Letter key={index} letter={cur} input={input}/>
     });
   }
+
   render() {
+    const placeholder = this.word.split('').map(function(cur){
+      return ' _ ';
+    }).join('');
     return(
       <div>
-        <h1>{this.letters}</h1>
+        <h1>{placeholder}</h1>
       </div>
     )
   }
