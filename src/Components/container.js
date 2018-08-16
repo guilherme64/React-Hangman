@@ -16,8 +16,6 @@ class Container extends Component {
     console.log('esse é o input '+ this.state.input);
   }
 
-
-
   render(){
     return(
       <div>
