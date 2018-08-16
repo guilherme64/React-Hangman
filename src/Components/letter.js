@@ -4,15 +4,25 @@ class Letter extends Component {
     constructor(props) {
         super(props);
         this.state = {letter: this.props.letter, hidden: true}
+       
         console.log(this.props.input);
     }
 
+
+
     render() {
+        if(this.props.input.toUpperCase() === this.props.letter){
+            return<span>{' '+this.state.letter+' '}</span>
+        }
+        else{
+            return<span>{' _ '}</span>
+        }
+        /*
         if(this.state.hidden === true) {
             return <span>{' _ '}</span>
         }else{
             return<span>{' '+this.state.letter+' '}</span>
-        }
+        }*/
     }
 }
 

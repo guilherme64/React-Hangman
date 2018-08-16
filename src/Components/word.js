@@ -4,19 +4,25 @@ import Letter from './letter';
 class Word extends Component {
   constructor(props) {
     super(props);
-    var input = this.props.input
+   // var input = this.props.input
     this.word = this.props.word;
-    this.letters = this.word.split('').map(function(cur, index) {
+    /*this.letters = this.word.split('').map(function(cur, index) {
       return <Letter key={index} letter={cur} input={input}/>
     });
-    console.log(this.letters);
+    console.log(this.letters);*/
   }
 
-  render() {
 
+
+  render() {
+    let input = this.props.input;
     return(
       <div>
-        <h1>{this.letters}</h1>
+        <h1>
+          {this.word.split('').map(function(cur, index) {
+            return <Letter key={index} letter={cur} input={input}/>
+         })}
+    </h1>
       </div>
     )
   }
