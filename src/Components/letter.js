@@ -8,12 +8,11 @@ class Letter extends Component {
         console.log(this.props.input);
     }
      componentDidUpdate() {
-         if(this.state.hidden === true){
+        if(this.state.hidden === true){
             if(this.props.input === this.props.letter){
                 this.setState({hidden: false});
             }
-        }
-         
+        }  
     }
     render() {
         if(this.state.hidden === true){
