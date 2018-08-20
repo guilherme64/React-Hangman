@@ -19,7 +19,7 @@ class Container extends Component {
   render(){
     return(
       <div>
-        <Word word='PALAVRA' input={this.state.input}/>
+        <Word word={'metal'.toUpperCase()} input={this.state.input}/>
         <Input handleInput = {this.handleInput}/>
       </div>
     );
